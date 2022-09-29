@@ -1,0 +1,177 @@
+
+header {
+    
+    // margin-bottom: 9rem;
+    // background-color: var(--dark-blue);
+    color: white;
+    .client-tab {
+      h1 {
+        font-size: 1rem;
+      }
+    }
+    // background-color: #000;
+    video {
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      mix-blend-mode: screen;
+    }
+    .text-bg {
+      color: #FFF500;
+      font-size: 52/16 + rem;
+      font-weight: 900;
+      line-height: 1;
+      // max-width: 24rem;
+    }
+    .subhead {
+      font-size: 24/16 + rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .bg {
+        height: 80vh;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;            
+        position: relative;
+        @include mq(tablet) {
+            // height: 540px;
+            height: 66vh;
+            // background-size: 96%, cover;
+        }
+      // position: absolute;
+      // max-height: 545px;
+      // width: 120vw;
+      // background-attachment: fixed;
+      // border: 20px solid #000000;
+
+
+      // border: 10px solid #FFB321;
+      @include mq(desktop) {
+        background-position: 50% 30%;
+      }
+      @include mq(wide) {
+        height: 84vh;
+      }
+    }
+  
+    .title {
+      position: relative;
+      color: white;
+        // margin: auto;
+      // margin-left: 10%;
+      margin-top: -10rem;
+      padding: 1rem;
+      max-width: 40rem;
+      // text-align: center;
+      @include mq(desktop) {
+        margin-top: 0;
+      }
+
+    }
+
+    @include mq(desktop) {
+      .title-wrap {
+        margin: 0 auto;
+      }
+
+    }
+
+    @include mq(wide) {
+      .title-wrap {
+        position: absolute;
+        margin-left: 10rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        top: 0;
+      }
+    }
+  
+  
+    .attribution {
+        // position: absolute;
+        width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      // padding: 1rem;
+      color: #767676;
+      a {
+        color: #767676;
+      }
+      .logo {
+        margin-left: 1rem;
+    }
+    img {
+          width: 140px;
+          display: block;
+      }
+      &>p {
+        display: flex;
+        align-items: center;
+        svg {
+          width: 80px;
+        }
+      }
+    }
+
+    .prompt {
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        bottom: 0;
+        padding: 2rem;
+        display: none;
+        @include mq(desktop) {
+            display: flex;
+        }
+    }
+
+    .client-tab {
+      background-color: #005689;
+      display: inline-block;
+      padding: .25rem 1rem;
+      a {
+        color: #fff;
+        font-family:  "Display Sans", serif;
+
+      }
+    }
+    .main-title {
+      color: #003351;
+      background-color: white;
+      display: inline-block;
+      max-width: 940px;
+      @include mq(wide) {
+        width: 940px;
+      }
+      padding: 1rem;
+      h1 {
+        margin: 0;
+        font-weight: 400;
+        @include mq($until: wide) {
+
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+    .title-block {
+      margin-bottom: -8rem;
+    }
+
+  }
+
+  .client-hub-link {
+      a {
+        background-color: var(--brand-alt);
+        padding: 0.5rem;
+      }
+  }

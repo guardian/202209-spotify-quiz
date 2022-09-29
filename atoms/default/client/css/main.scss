@@ -1,0 +1,34 @@
+:root {
+    --primary-color: #000000;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  figure.element {
+    margin-top: 0 !important;
+  }
+@import "fonts";
+@import "mq";
+@import "palette";
+@import "app";
+@import "common";
+
+#Glabs {
+    background-color: black;
+    color: var(--primary-color);
+    font-family: "Guardian Egyptian Web", sans-serif;
+    line-height: 1.4;
+
+    @import "attribution";
+    @import "header";
+    @import "brother";
+    @import "audioPlayer";
+
+}
+// @import "enhancer";
+
+.interactive-atom {
+    margin: 0;
+    padding: 0;
+}
