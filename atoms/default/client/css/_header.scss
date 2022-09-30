@@ -5,9 +5,12 @@ header {
     // background-color: var(--dark-blue);
     color: white;
     .client-tab {
-      h1 {
-        font-size: 1rem;
-      }
+      font-size: 18/16 + rem;
+      font-weight: 900;
+      a {
+        color: #fff;
+        font-weight: 900;
+      }      
     }
     // background-color: #000;
     video {
@@ -24,12 +27,14 @@ header {
       font-size: 52/16 + rem;
       font-weight: 900;
       line-height: 1;
+      padding-bottom: 0.5rem;
       // max-width: 24rem;
     }
     .subhead {
       font-size: 24/16 + rem;
       font-weight: 900;
-      line-height: 1;
+      line-height: 1.2;
+     
     }
     .bg {
         height: 80vh;
@@ -133,16 +138,7 @@ header {
         }
     }
 
-    .client-tab {
-      background-color: #005689;
-      display: inline-block;
-      padding: .25rem 1rem;
-      a {
-        color: #fff;
-        font-family:  "Display Sans", serif;
 
-      }
-    }
     .main-title {
       color: #003351;
       background-color: white;

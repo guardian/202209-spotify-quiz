@@ -77,6 +77,7 @@ const HeaderWithLogo = () => {
                     
                     <div className="title-wrap">
                         <div class="title">
+                            <div className="client-tab" {...setHtml(content.clientTab)}></div>
                             <h1 className="text-bg" {...setHtml(content.headline)}></h1>
                             <div className="subhead" {...setHtml(content.subhead)}></div>
                             
@@ -468,32 +469,49 @@ const QuestionPanel = ({questions}) => {
                 })}
             </form>
             {results && 
-                <div id="result">
-                    <div className="inner">
+                <ResultsPanel 
+                    results={results}
+                    content={content}
 
-                        <div className="summary">
-                            <p>Your go-to playlist is...</p>
-                            <div className="list-name">
-                                <p {...setHtml(content[`name-${results.join('-')}`])} />
-                                
-                            </div>
-                            <div className="list-desc">
-                                <p {...setHtml(content[results.join('-')])}
-                                />
-                            </div>
-                        </div>
-                        <div className="embed">
-                            {results.map((v,i)=>
-                                <div className="playlist">
-
-                                    <iframe style="border-radius:12px" src={`${playlists[v].playlist}`} width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>                    
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
+                />
+                
             }
         </div>
+    )
+}
+
+const ResultsPanel = ({results, content}) => {
+    const ref = useRef();
+
+    useEffect(()=>{
+        ref.current.scrollIntoView({behavior: 'smooth'});
+    },[]);
+
+    return (
+    <div id="result" ref={ref}>
+        <div className="inner">
+
+            <div className="summary">
+                <p>Your go-to playlist is...</p>
+                <div className="list-name">
+                    <p {...setHtml(content[`name-${results.join('-')}`])} />
+                    
+                </div>
+                <div className="list-desc">
+                    <p {...setHtml(content[results.join('-')])}
+                    />
+                </div>
+            </div>
+            <div className="embed">
+                {results.map((v,i)=>
+                    <div className="playlist">
+
+                        <iframe style="border-radius:12px" src={`${playlists[v].playlist}`} width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>                    
+                    </div>
+                )}
+            </div>
+        </div>
+    </div>        
     )
 }
 
