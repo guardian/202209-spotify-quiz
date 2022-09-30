@@ -331,6 +331,8 @@ const Question = ({data, index, onDone, id}) => {
             style={{
                 '--bg-color': data.bgColor,
                 '--selected-color': data.questionColor,
+                '--option-color': data.optionColor,
+                '--label-bg': data.labelBg,
             }}
         >
             <div className="inner">
