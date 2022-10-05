@@ -154,7 +154,10 @@ const Footer = ({content, related, shareUrl}) => {
                     <SocialBar title={content.shareTitle} url={shareUrl} />
                 </div>
                 <div className="related">
-                    <RelatedContent cards={related} />
+                    <div className="boxed">
+                        <h2>Related content</h2>
+                        <RelatedContent cards={related} />
+                    </div>
                 </div>
             </div>
         </section>

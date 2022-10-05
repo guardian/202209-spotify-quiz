@@ -74,6 +74,11 @@
   // margin: 0 auto 5vh;
 }
 
+.boxed {
+  max-width: 48rem;
+  margin: auto;
+}
+
 h1, h2 {
   line-height: 1.2;
   font-size: 28/16 + rem;
@@ -519,7 +524,15 @@ $stand-first-color: transparent;
 section.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   background-color: var(--dark-blue);
+  color: white;
+
+  h2 {
+    margin-top: 3rem;
+    text-align: center;
+  }
   
   .disc p {
     font-size: 10/16 + rem;
@@ -595,9 +608,10 @@ section.footer {
     }
     .related-item {
       // width: 50%;
+      // max-width: 360px;
       .img {
         margin-bottom: 1rem;
-        height: 230/16 + rem;
+        height: 330/16 + rem;
         background-size: cover;
         background-position: 50%;
       }
@@ -612,7 +626,7 @@ section.footer {
         // transform: rotateZ(0.01deg);
         border: 0px solid currentColor;
         &:hover {
-          border-left: 6px solid currentColor;
+          border-left: 6px solid #771dc3;
         }
       }
     }
